@@ -8,10 +8,11 @@ const router = express.Router();
 router.post("/", async (req, res, next) => {
   try {
     let grade = req.body;
+    console.log(grade.name);
 
-    // if (!grade.name || grade.balance == null) {
-    //     throw new Error("Name e Balance são obrigatórios.");
-    // }
+    if (!grade.student || !grade.subject || !grade.type || !grade.value) {
+      throw new Error("Student, subject, type and value must be filled.");
+    }
 
     const data = JSON.parse(await readFile(global.fileName));
 
@@ -40,20 +41,18 @@ router.put("/:id", async (req, res, next) => {
     const grade = req.body;
     const id = req.params.id;
 
-    // if (!grade.id || !grade.name || grade.balance == null) {
-    //     throw new Error("Id, Name e Balance são obrigatórios.");
-    // }
+    if (!id || !grade.value) {
+      throw new Error("Id and value must be filled");
+    }
 
     const data = JSON.parse(await readFile(global.fileName));
     const index = data.grades.findIndex((a) => a.id === parseInt(id));
 
     if (index === -1) {
-      throw new Error("Registro não encontrado.");
+      throw new Error("Record not found");
     }
 
     data.grades[index].id = parseInt(id);
-    // data.grades[index].student = grade.student;
-    // data.grades[index].type = grade.type;
     data.grades[index].value = grade.value;
     data.grades[index].timestamp = new Date();
 
