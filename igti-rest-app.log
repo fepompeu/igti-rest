@@ -1,0 +1,7 @@
+2020-10-14T03:17:31.543Z [igti-rest-app] info: POST /grades - {"id":49,"student":"Roberto Achar","subject":"03 - React","type":"Fórum","value":10,"timestamp":"2020-10-14T03:17:31.538Z"}
+2020-10-14T03:17:34.441Z [igti-rest-app] info: PUT /grades - {"value":15}
+2020-10-14T03:17:37.005Z [igti-rest-app] info: DELETE /grades/32
+2020-10-14T03:17:39.031Z [igti-rest-app] info: GET /grades/43 - {"id":43,"student":"Rodrigo Branas","subject":"03 - React","type":"Trabalho Prático","value":6,"timestamp":"2020-05-19T18:21:25.253Z"}
+2020-10-14T03:17:41.147Z [igti-rest-app] info: GET /grades/sum/Roberto Achar/03 - React - {"studant":"Roberto Achar","totalValue":70}
+2020-10-14T03:17:43.066Z [igti-rest-app] info: GET /grades/sum/04 - MongoDB/Trabalho Prático - {"studant":"04 - MongoDB","averageValue":26}
+2020-10-14T03:17:44.664Z [igti-rest-app] info: GET /grades/best/03 - React/Trabalho Prático - [{"id":31,"student":"Roberto Achar","subject":"03 - React","type":"Trabalho Prático","value":27,"timestamp":"2020-05-19T18:21:25.171Z"},{"id":19,"student":"Roberta Arcoverde","subject":"03 - React","type":"Trabalho Prático","value":7,"timestamp":"2020-05-19T18:21:25.072Z"},{"id":43,"student":"Rodrigo Branas","subject":"03 - React","type":"Trabalho Prático","value":6,"timestamp":"2020-05-19T18:21:25.253Z"}]
